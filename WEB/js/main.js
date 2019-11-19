@@ -1,4 +1,4 @@
-const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarToggler = document.querySelector(".js-navbar-toggler");
 const navbarMenu = document.querySelector(".navbar ul");
 const navbarLinks = document.querySelectorAll(".navbar a")
 
@@ -9,21 +9,33 @@ function navbarTogglerClick() {
     navbarMenu.classList.toggle("open");
 }
 
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+        navbarMenu.classList.contains("open") ? navbarToggler.click() : false;
+    });
+});
+
+$(document).ready(function(){
+    $('.js-slick').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+}); 
+
 //navbarLinks.forEach(elem => elem.addEventListener("click", navbarLinkClick));
 
-for(let i=0; i<navbarLinks.length; i++) {
-    navbarLinks[i].addEventListener("click", navbarLinkClick);
-}
-
-function navbarLinkClick(event) {
-
-    smoothScroll(event);
-
-    if (navbarMenu.classList.contains("open")) {
-        navbarToggler.click();
-    }
-}
-
+// for (let i = 0; i < navbarLinks.length; i++) {
+//     navbarLinks[i].addEventListener("click", navbarLinkClick);
+// }
 // function smoothScroll(event) {
 //     event.preventDefault();
 //     const targetId = event.currentTarget.getAttribute("href");
@@ -42,39 +54,39 @@ function navbarLinkClick(event) {
 //     })
 // }
 
-function smoothScroll(event) {
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href") === "#" ? "header" : event.currentTarget.getAttribute("href");
-    const targetPosition = document.querySelector(targetId).offsetTop;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 1000;
-    let start = null;
+// function smoothScroll(event) {
+//     event.preventDefault();
+//     const targetId = event.currentTarget.getAttribute("href") === "#" ? "header" : event.currentTarget.getAttribute("href");
+//     const targetPosition = document.querySelector(targetId).offsetTop;
+//     const startPosition = window.pageYOffset;
+//     const distance = targetPosition - startPosition;
+//     const duration = 1000;
+//     let start = null;
 
-    window.requestAnimationFrame(step);
+//     window.requestAnimationFrame(step);
 
-    function step(timestamp) {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        //window.scrollTo(0, distance * (progress / duration) + startPosition);
-        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-        if (progress < duration) window.requestAnimationFrame(step);
-    }
-}
+//     function step(timestamp) {
+//         if (!start) start = timestamp;
+//         const progress = timestamp - start;
+//         //window.scrollTo(0, distance * (progress / duration) + startPosition);
+//         window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+//         if (progress < duration) window.requestAnimationFrame(step);
+//     }
+// }
 
-function linear(t, b, c, d) {
-    return c*t/d + b;
-}
+// function linear(t, b, c, d) {
+//     return c * t / d + b;
+// }
 
-function easeInOutQuad(t, b, c, d) {
-    t /= d/2;
-    if (t < 1) return c/2*t*t + b;
-    t--;
-    return -c/2 * (t*(t-2) - 1) + b;
-};
+// function easeInOutQuad(t, b, c, d) {
+//     t /= d / 2;
+//     if (t < 1) return c / 2 * t * t + b;
+//     t--;
+//     return -c / 2 * (t * (t - 2) - 1) + b;
+// };
 
-function easeInOutCubic(t, b, c, d) {
-    t /= d;
-	t--;
-	return c*(t*t*t + 1) + b;
-};
+// function easeInOutCubic(t, b, c, d) {
+//     t /= d;
+//     t--;
+//     return c * (t * t * t + 1) + b;
+// };

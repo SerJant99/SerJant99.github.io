@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylecontent.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap&subset=cyrillic" rel="stylesheet">
     <title>Impulse</title>
 </head>
 
 <body>
     <nav class="navbar">
-        <a href="#" class="navbar-brand">Impulse</a>
+        <a href="#intro" class="navbar-brand">Impulse</a>
         <!-- <a href="#" class="navbar-brand"><img src="ZaDalaran.jpg" style=" width: 50px; vertical-align: middle;"></a> -->
         <ul>
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#content">Контент</a></li>
+            <li><a href="#teaser">Тизер</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#team">Команда</a></li>
             <li><a href="#about">О нас</a></li>
         </ul>
-        <button class="navbar-toggler">
+        <button class="navbar-toggler js-navbar-toggler">
             <span></span>
         </button>
     </nav>
 
-    <header class="intro container">
+    <header class="intro container" id="intro">
         <div class="fullscreen-gif-wrap">
-            <img src="Back.gif" alt=""></video>
+            <img src="media/Back.gif" alt=""></video>
         </div>
         <div class="header-overlay"></div>
         <div class="header-content">
@@ -36,17 +41,51 @@
             <a href="#" class="btn">Скачать</a>
         </div>
     </header>
-    <section id="home" class="container1">
-        <h2>Home</h2>
-    </section>
-    <section id="content" class="container2">
-        <h2>Content</h2>
-    </section>
-    <section id="about" class="container3">
-        <h2>About</h2>
+
+    <div class="teaser" id="teaser">
+        <h2>Тизер</h2>
+    </div>
+
+    <section class="gallery" id="gallery">
+        <h2>Галерея</h2>
+        <div class="slick js-slick">
+            <img src="https://images.wallpaperscraft.ru/image/fon_sploshnoy_svetlyy_yarkiy_44011_1920x1080.jpg" alt="" class="slideshow-img">
+            <img src="http://hq-wallpapers.ru/wallpapers/8/hq-wallpapers_ru_abstraction3d_38717_1920x1080.jpg" alt="" class="slideshow-img">
+            <img src="https://wallscloud.net/wallpaper/textures/Siniy-Fon/6zOR/1920x1080/download" alt="" class="slideshow-img">
+            <img src="https://images7.alphacoders.com/974/974802.png" alt="" class="slideshow-img">   
+        </div>
     </section>
 
-    <script src="js/main.js"></script>
+    <div class="team" id="team">
+        <h2>Команда</h2>
+    </div>
+
+    <div class="about" id="about">
+        <h2>О нас</h2>
+    </div>
+
+    <!-- <section id="teaser" class="container1">
+        <h2>Тизер</h2>
+    </section>
+    <section id="gallery" class="container2">
+        <h2>Галерея</h2>
+        <div class="slick js-slick">
+            <img src="img/1.png" alt="" class="slideshow-img">
+            <img src="img/2.jpg" alt="" class="slideshow-img">
+            <img src="img/3.jpg" alt="" class="slideshow-img">
+            <img src="img/4.jpg" alt="" class="slideshow-img">
+        </div>
+    </section>
+    <section id="team" class="container3">
+        <h2>Команда</h2>
+    </section>
+    <section id="about" class="container4">
+        <h2>О нас</h2>
+    </section> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="slick/slick.min.js" defer></script>
+
 </body>
 
 </html>
