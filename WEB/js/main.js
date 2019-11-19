@@ -23,6 +23,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 $(document).ready(function(){
     $('.js-slick').slick({
+        arrows: false,
         dots: true,
         infinite: true,
         speed: 500,

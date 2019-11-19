@@ -1,4 +1,17 @@
+.teaser{
+    height: 100vh;
+}
+
 .gallery {
     max-width: 1400px;
     margin: 20px auto;
+    width: 100%;
+}
+
+.team {
+    height: 100vh;
+}
+
+.about {
+    height: 100vh;
 }
