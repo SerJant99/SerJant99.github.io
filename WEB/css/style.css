@@ -6,11 +6,12 @@
 
 body {
     font-family: 'Poiret One', cursive;
-    background-color: rgb(3, 3, 3);
+    background-color: rgb(1, 1, 1);
     color: #333;
     margin: 0;
     font-size: 1rem;
     line-height: 1.5;
+    background-position: center center;
 }
 
 .navbar {
@@ -82,9 +83,11 @@ body {
 }
 
 .intro {
+    display: flex;
     width: 100%;
     height: 100vh;
     background-size: cover;
+    background-position: center;
     display: flex;
     color: #fff;
     align-items: center;
@@ -99,6 +102,9 @@ body {
 }
 
 .fullscreen-gif-wrap {
+    display: flex;
+    background-position: center;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -227,5 +233,23 @@ body {
 
     .navbar .navbar-toggler.open-navbar-toggler span::after {
         transform: translateY(-3px) rotate(-45deg);
+    }
+
+    .fullscreen-gif-wrap {
+        display: block;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .atmosphere{
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+        color: #fff;
     }
 }

@@ -23,12 +23,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 $(document).ready(function(){
     $('.js-slick').slick({
-        arrows: false,
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
         dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
     });
 }); 
 

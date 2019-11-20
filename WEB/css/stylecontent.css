@@ -1,11 +1,30 @@
 .teaser{
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-bottom: 400px;
+    height: 0;
+}
+
+.teaser iframe{
+    position: absolute;
+    width: 50%;
+    height: 50%;   
+}
+
+.atmosphere{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: #fff;
+    margin-top: 15vh;
+    margin-bottom: 40vh;
 }
 
 .gallery {
-    max-width: 1400px;
+    max-width: 900px;
     margin: auto;
-    width: 100%;
 }
 
 .team {
@@ -14,4 +33,32 @@
 
 .about {
     height: 100vh;
+}
+
+
+@media (max-width: 767px) {
+    .atmosphere{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        color: #fff;
+        margin-top: 15vh;
+        margin-bottom: 40vh;
+    }
+
+    .teaser{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+
+    .teaser iframe{
+        position: absolute;
+        width: 90%;
+        height: 90%;   
+    }
+    
 }
