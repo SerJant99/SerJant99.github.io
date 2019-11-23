@@ -9,6 +9,16 @@ function navbarTogglerClick() {
     navbarMenu.classList.toggle("open");
 }
 
+$(window).on('scroll', function(){
+  if ($(window).scrollTop()){
+    $('nav').addClass('white');
+  }
+  else
+  {
+    $('nav').removeClass('white');
+  }
+})
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -51,6 +61,30 @@ $(document).ready(function(){
         ]
     });
 }); 
+
+
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
+
+var card2 = document.querySelector('.card2');
+card2.addEventListener( 'click', function() {
+  card2.classList.toggle('is-flipped');
+});
+
+var card3 = document.querySelector('.card3');
+card3.addEventListener( 'click', function() {
+  card3.classList.toggle('is-flipped');
+});
+
+
+VANTA.NET({
+  el: "#intro",
+  color: 0xfa50fa,
+  backgroundColor: 0x000000
+});
+
 
 //navbarLinks.forEach(elem => elem.addEventListener("click", navbarLinkClick));
 

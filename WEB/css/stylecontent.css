@@ -18,8 +18,8 @@
     justify-content: center;
     font-size: 40px;
     color: #fff;
-    margin-top: 15vh;
-    margin-bottom: 40vh;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
 }
 
 .gallery {
@@ -28,13 +28,68 @@
     margin: auto;
 }
 
-.team {
-    height: 100vh;
+.team-description{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: #fff;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
-.about {
-    height: 100vh;
+
+.scene {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  perspective: 700px;
+  margin: 40px 0;
+  justify-content: center;
 }
+
+.card, .card2, .card3 {
+    width: 260px;
+    height: 260px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  float: left;
+}
+
+.card.is-flipped, .card2.is-flipped, .card3.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face, .card2-face, .card3-face {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-face-front img, .card2-face-front img, .card3-face-front img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+.card-face-back, .card2-face-back, .card3-face-back {
+  background: white;
+  color: black;
+  transform: rotateY(180deg);
+  border-radius: 20px;
+}
+
 
 
 @media (max-width: 767px) {
@@ -43,8 +98,8 @@
         justify-content: center;
         font-size: 30px;
         color: #fff;
-        margin-top: 15vh;
-        margin-bottom: 40vh;
+        margin-top: 20vh;
+        margin-bottom: 20vh;
     }
 
     .teaser{
@@ -60,10 +115,41 @@
         position: absolute;
         width: 90%;
         height: 90%;   
-    }
-    
-}
+    } 
+    .team-description{
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      color: #fff;
+      margin-top: 20vh;
+      margin-bottom: 20vh;
+  }
+  .scene {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    perspective: 700px;
+    margin: 40px 0;
+    justify-content: center;
+  }
+  
+  .card, .card2, .card3 {
+      width: 260px;
+      height: 260px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    float: left;
+  }
+  
+  
 
+  }
+    
 @media (max-width:446px) {
     .atmosphere{
         display: flex;
@@ -71,5 +157,4 @@
         font-size: 24px;
         color: #fff;
     }
-
 }
