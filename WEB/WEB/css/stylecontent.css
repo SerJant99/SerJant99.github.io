@@ -37,10 +37,6 @@
   margin-bottom: 20vh;
 }
 
-.about {
-    height: 100vh;
-}
-
 
 .scene {
   display: flex;
@@ -49,7 +45,6 @@
   perspective: 700px;
   margin: 40px 0;
   justify-content: center;
-  padding: 20px 20px 20px;
 }
 
 .card, .card2, .card3 {
@@ -59,6 +54,9 @@
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
   float: left;
 }
 
@@ -126,6 +124,20 @@
       margin-top: 20vh;
       margin-bottom: 20vh;
   }
+  .scene {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    perspective: 700px;
+    margin: 40px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav a{
+    font-size: 24px;
+  }
 
   }
     
@@ -136,4 +148,14 @@
         font-size: 24px;
         color: #fff;
     }
+    .scene {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      perspective: 700px;
+      margin: 40px 0;
+      justify-content: center;
+    }
+    
 }
